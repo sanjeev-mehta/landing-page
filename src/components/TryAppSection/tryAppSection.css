@@ -1,0 +1,83 @@
+.try-app-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    background-image: url('../../assets/bgDesktop.jpg');
+    height: 520px;
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .try-app-section .content {
+        text-align: left;
+        padding: 20px;
+        width: 400px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        position: absolute; 
+        top: 30%;
+    }
+
+    .try-app-section .subtitle {
+        padding-right: 0.5rem;
+    }
+
+    .try-app-section .title {
+        text-align: left;
+    }
+}
+
+/* Background image for mobile view */
+@media (max-width: 767px) {
+    .try-app-section {
+        background-image: url('../../assets/bgMobile.jpg');
+        height: 636px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .try-app-section .title {
+        text-align: center;
+    }
+}
+
+.try-app-section .title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    z-index: 2;
+    position: relative;
+}
+
+.try-app-section .subtitle {
+    font-family: 'Outfit', sans-serif;
+    font-weight: light;
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+.try-app-section .download-image {
+    width: 150px;
+    /* Adjust the size as needed */
+    height: auto;
+    transition: transform 0.3s ease;
+    z-index: 2;
+    /* Ensure the image is above the background image */
+    position: relative;
+    border-radius: 8px;
+}
+
+.try-app-section .download-image:hover {
+    transform: scale(1.1);
+}
