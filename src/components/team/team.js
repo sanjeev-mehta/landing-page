@@ -94,7 +94,7 @@ const TeamSection = () => {
     }, []);
 
     return (
-        <div className="teamSection">
+        <div className="teamSection" id='teamSection'>
             <h2 className="teamTitle">Meet Our Team</h2>
             <p className="tagline">Innovative. Strategic. Passionate.</p>
             <div className="teamGrid">

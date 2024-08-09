@@ -11,7 +11,8 @@ function Header() {
   };
 
   return (
-    <header className="header">
+    
+    <header className="header" id='mainHeader'>
       <div className="header-content">
         {/* Logo */}
         <img src={Logo} alt="Logo" className="logo" />
@@ -21,6 +22,7 @@ function Header() {
           <img src={menubar} alt="Menu" className="menu-icon" />
         </button>
       </div>
+     
 
       {/* Mobile Menu */}
       <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
@@ -28,10 +30,19 @@ function Header() {
           &times;
         </button>
         <ul className="menu-items">
-          <li><a href="#home" onClick={toggleMenu}>Home</a></li>
+          <li><a href="#hero-section" onClick={toggleMenu}>Home</a></li>
           <li><a href="#features" onClick={toggleMenu}>Features</a></li>
-          <li><a href="#team" onClick={toggleMenu}>Team</a></li>
-          <li><a href="#proposal" onClick={toggleMenu}>Proposal</a></li>
+          <li><a href="#teamSection" onClick={toggleMenu}>Team</a></li>
+          {/* <li><a href="#proposal" onClick={toggleMenu}>Proposal</a></li> */}
+        </ul>
+      </div>
+      <div className='desktopNavigation'>
+        <ul>
+        <li><a href="#hero-section" >Home</a></li>
+          <li><a href="#features" >Features</a></li>
+          <li><a href="#teamSection">Team</a></li>
+
+
         </ul>
       </div>
     </header>

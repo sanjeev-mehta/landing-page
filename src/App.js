@@ -4,6 +4,8 @@ import HeroSection from './components/Hero/heroSection.js';
 import MiddleSection from './components/MiddleSection/middleSection.js';
 import TeamSection from './components/team/team.js';
 import TryAppSection from './components/TryAppSection/tryAppSection.js';
+import Footer from './components/Footer/footer.js';
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
     <MiddleSection />
     <TeamSection />
     <TryAppSection />
+    <Footer />
     </div>
   );
 }

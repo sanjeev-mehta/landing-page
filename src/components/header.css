@@ -5,6 +5,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed; /* Keep header fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it stays above other content */
 }
 
 .header-content {
@@ -34,34 +39,31 @@
 .mobile-menu {
   position: fixed;
   top: 0;
+  left: 0;
   right: 0;
-  width: 250px;
-  height: 100%;
-  background-color: #000;
+  width: 100%; /* Full width */
+  height: 300px; /* Adjust as needed */
+  background-color: #000000cf;
   color: #fff;
-  transform: translateX(100%);
+  transform: translateY(-100%); /* Hide menu off-screen initially */
   transition: transform 0.3s ease;
   padding: 16px;
   z-index: 1000;
-  border-radius: 0 0 20px 0;
+  border-radius: 0 0 20px 20px; /* Rounded bottom corners */
 }
 
 .mobile-menu.open {
-  transform: translateX(0);
+  transform: translateY(0); /* Slide in from the top */
 }
 
 .close-button {
   background: none;
-  border: none;
   color: #fff;
   font-size: 24px;
   cursor: pointer;
   position: absolute;
   top: 16px;
   right: 16px;
-  border-radius: 50%;
-  padding: 8px;
-  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Menu Items */
@@ -81,19 +83,73 @@
   font-size: 18px;
 }
 
-/* Desktop Menu Button Positioning */
-@media (max-width: 768px) {
-  .menu-button {
-      display: block;
-      position: absolute;
-      right: 16px;
-  }
+/* Desktop Navigation */
+.desktopNavigation {
+  display: none; /* Hidden by default, adjust visibility as needed */
+  padding: 0 100px; /* Add padding on left and right */
+}
 
-  .header-content {
-      justify-content: flex-start;
+.desktopNavigation ul {
+  display: flex; /* Display items inline */
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.desktopNavigation li {
+  margin-right: 20px; /* Space between menu items */
+}
+
+.desktopNavigation li:last-child {
+  margin-right: 0; /* No margin on the last item */
+}
+
+.desktopNavigation a {
+  text-decoration: none;
+  color: #000; /* Adjust color as needed */
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+/* Mobile Menu (Hidden on Desktop) */
+@media (min-width: 769px) {
+  .menu-button {
+    display: none; /* Hide mobile menu button on desktop */
   }
 
   .mobile-menu {
-      display: block; 
+    display: none; /* Hide mobile menu on desktop */
+  }
+
+  .desktopNavigation {
+    display: flex; /* Show desktop navigation on larger screens */
+  }
+  .header{
+    padding-left: 8%;
+    padding-right: 8%;
   }
 }
+
+/* Tablet and Mobile Menu (Visible on Tablets and Phones) */
+@media (max-width: 450px) {
+  .menu-button {
+    display: block;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+
+  .header-content {
+    justify-content: space-between;
+  }
+
+  .desktopNavigation {
+    display: none; /* Hide desktop navigation on tablets and phones */
+  }
+  .desktopNavigation a{
+    text-decoration: none;
+
+  }
+  
+}
+

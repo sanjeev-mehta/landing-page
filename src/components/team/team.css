@@ -40,6 +40,7 @@
     font-weight: 600;
     text-align: center;
     color: #1F59DA;
+    margin-bottom: 10px;
 }
 
 .tagline {
@@ -141,4 +142,31 @@
     width: 10px;
     height: 10px;
     margin-left: 5px;
+}
+.tagline{
+    font-size: 20px !important;
+}
+
+@media (min-width: 769px) {
+    
+    .teamGrid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Define 4 equal columns */
+        gap: 20px; /* Adjust gap between items */
+    }
+    
+    .teamSection{
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    
+    
+    .teamImage {
+        width: 75%;
+        
+        
+    }
+    
+    
+   
 }

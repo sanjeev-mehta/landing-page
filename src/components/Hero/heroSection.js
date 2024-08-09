@@ -20,15 +20,22 @@ function HeroSection() {
     
         return () => window.removeEventListener('scroll', handleScroll);
       }, []);
+
+      const handleButtonClick = () => {
+        window.open('https://testflight.apple.com/join/T3PNU5bm', '_blank');
+      };
       
   return (
-    <section className="hero-section">
+    <section className="hero-section" id='hero-section'>
       <div className={`hero-content ${isVisible ? 'visible' : ''}`}>
-        <h1 className="hero-heading">Revolutionizing Your Physiotherapy Journey</h1>
+        <h1 className="hero-heading">Revolutionizing Your <br /> Physiotherapy Journey</h1>
         <p className="hero-subheadline">Make your Physiotherapy experience seamless and simplified with PhysioSync</p>
         <div className="hero-buttons">
-          <button className="hero-button">
+          <button className="hero-button" onClick={handleButtonClick}>
+
+          
             <img src={ButtonImage1} alt="Button 1" />
+           
           </button>
           <button className="hero-button">
             <img src={ButtonImage2} alt="Button 2" />

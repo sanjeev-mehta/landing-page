@@ -3,6 +3,8 @@ import './tryAppSection.css';
 import appStoreImage from '../../assets/App_Store.jpg';
 
 const TryAppSection = () => {
+   
+    
     return (
         <div className="try-app-section">
             <div className='content'>
@@ -10,7 +12,7 @@ const TryAppSection = () => {
             <p className="subtitle">
             Download Physiosync app available only on App Store and begin a personalized journey towards lasting results
             </p>
-            <a href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank" rel="noopener noreferrer">
+            <a href="https://testflight.apple.com/join/T3PNU5bm" target="_blank" rel="noopener noreferrer">
                 <img src={appStoreImage} alt="Download on the App Store" className="download-image" />
             </a>
             </div>

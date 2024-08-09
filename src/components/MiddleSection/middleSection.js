@@ -47,7 +47,9 @@ const MiddleSection = () => {
     }, []);
 
     return (
-        <div className={styles.section}>
+        // <div className={styles.section}>
+                <div className={`${styles.section} `} id='features'>
+
             <h2 className="title">Why You Should Use PhysioSync</h2>
             <div className={styles.gridContainer}>
                 {images.map((src, index) => (
